@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+  ~  @author Gtstudio
+  ~  @copyright Copyright (c) 2023 Gtstudio
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Cms\Model\Page\CustomLayout\CustomLayoutManager">
+        <plugin name="Gtstudio_SelectedLayout::CmsSelectableLayout"
+                type="Gtstudio\SelectedLayout\Plugin\CmsSelectableLayout"
+                sortOrder="10"/>
+    </type>
+    <type name="Magento\Catalog\Model\Category\Attribute\LayoutUpdateManager">
+        <plugin name="Gtstudio_SelectedLayout::CategorySelectedLayout"
+                type="Gtstudio\SelectedLayout\Plugin\CategorySelectedLayout"
+                sortOrder="10"/>
+    </type>
+    <type name="Magento\Catalog\Model\Product\Attribute\LayoutUpdateManager">
+        <plugin name="Gtstudio_SelectedLayout::ProductSelectedLayout"
+                type="Gtstudio\SelectedLayout\Plugin\ProductSelectedLayout"
+                sortOrder="10"/>
+    </type>
+</config>
