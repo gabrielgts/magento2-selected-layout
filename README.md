@@ -1,4 +1,4 @@
-# Module Gtstudio DarkMode
+# Module Gtstudio Selectable Layout
 
     gtstudio/module-selected-layout
 
