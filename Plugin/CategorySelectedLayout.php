@@ -22,9 +22,9 @@ use Magento\Framework\View\Model\Layout\MergeFactory as LayoutProcessorFactory;
 
 class CategorySelectedLayout
 {
-    private FlyweightFactory $themeFactory,
-    private DesignInterface $design,
-    private LayoutProcessorFactory $layoutProcessorFactory
+    private FlyweightFactory $themeFactory;
+    private DesignInterface $design;
+    private LayoutProcessorFactory $layoutProcessorFactory;
 
     public function __construct(
         FlyweightFactory $themeFactory,
