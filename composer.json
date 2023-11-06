@@ -1,6 +1,6 @@
 {
   "name": "gtstudio/module-selected-layout",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Add general selectable layout functionality on CMS pages,category and products",
   "type": "magento2-module",
   "require": {

@@ -91,7 +91,7 @@ class CategorySelectedLayout
      * @param CategoryInterface $category
      * @return mixed
      */
-    private function extractAttributeValue(CategoryInterface $category): mixed
+    private function extractAttributeValue(CategoryInterface $category)
     {
         if ($category instanceof Category && !$category->hasData(CustomAttributesDataInterface::CUSTOM_ATTRIBUTES)) {
             return $category->getData('custom_layout_update_file');
