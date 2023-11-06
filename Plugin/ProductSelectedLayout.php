@@ -22,11 +22,18 @@ use Magento\Framework\View\Model\Layout\MergeFactory as LayoutProcessorFactory;
 
 class ProductSelectedLayout
 {
+    private FlyweightFactory $themeFactory;
+    private DesignInterface $design;
+    private LayoutProcessorFactory $layoutProcessorFactory;
+
     public function __construct(
-        private FlyweightFactory $themeFactory,
-        private DesignInterface $design,
-        private LayoutProcessorFactory $layoutProcessorFactory
+        FlyweightFactory $themeFactory,
+        DesignInterface $design,
+        LayoutProcessorFactory $layoutProcessorFactory
     ) {
+        $this->themeFactory = $themeFactory;
+        $this->design = $design;
+        $this->layoutProcessorFactory = $layoutProcessorFactory;
     }
 
     /**

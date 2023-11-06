@@ -24,13 +24,24 @@ use Magento\Framework\View\Result\Page as PageLayout;
 
 class CmsSelectableLayout
 {
+    private LayoutProcessorFactory $layoutProcessorFactory;
+    private FlyweightFactory $themeFactory;
+    private DesignInterface $design;
+    private IdentityMap $identityMap;
+    private PageRepositoryInterface $pageRepository;
+
     public function __construct(
-        private LayoutProcessorFactory $layoutProcessorFactory,
-        private FlyweightFactory $themeFactory,
-        private DesignInterface $design,
-        private IdentityMap $identityMap,
-        private PageRepositoryInterface $pageRepository
+        LayoutProcessorFactory $layoutProcessorFactory,
+        FlyweightFactory $themeFactory,
+        DesignInterface $design,
+        IdentityMap $identityMap,
+        PageRepositoryInterface $pageRepository
     ) {
+        $this->layoutProcessorFactory = $layoutProcessorFactory;
+        $this->themeFactory = $themeFactory;
+        $this->design = $design;
+        $this->identityMap = $identityMap;
+        $this->pageRepository = $pageRepository;
     }
 
     /**
